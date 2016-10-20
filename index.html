@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Test</title>
+    <meta name="description" content="Eugene Garichev">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+<div class="slide-wrap swiper-container">
+    <div class="swiper-wrapper">
+        <!--Форма №1-->
+        <div class="first-slide slider-item swiper-slide">
+            <form id="form1" class="form" data-color="red">
+                <div id="head1" class="red-head">
+                    <p class="header-title">Documents</p>
+                </div>
+                <div class="ul" id="ul_1a">
+
+                </div>
+                <div class="form-footer">
+                    <p class="send button_changer" id="">ADD ALL</p>
+                </div>
+            </form>
+            <!--Форма №2-->
+            <form id="form1b" class="form" data-color="green">
+                <div id="head1b" class="blue-head">
+                    <p class="header-title">Links</p>
+                </div>
+                <div class="ul" id="ul_1b">
+
+                </div>
+                <div class="form-footer">
+                    <p class="send button_changer" id="">ADD ALL</p>
+                </div>
+            </form>
+            <!--Форма №3-->
+            <form id="form1c" class="form" data-color="blue">
+                <div id="head1c" class="green-head">
+                    <p class="header-title">Science Lab</p>
+                </div>
+                <div class="ul" id="ul_1c">
+
+                </div>
+                <div class="form-footer">
+                    <p class="send button_changer" id="">ADD ALL</p>
+                </div>
+            </form>
+        </div>
+        <!--ВТОРАЯ ФОРМА-->
+        <div class="second-slide slider-item swiper-slide">
+            <form id="form2" class="second-slide form2">
+                <div id="head2" class="head second-form-head">
+                </div>
+                <!--Инпуты формы-->
+                <label for="name">Name</label>
+                <label for="email">Email</label>
+                <input type="" name="name" value="" title="Enter your`e name here" id="name" placeholder="User Name" onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'User Name'">
+                <input type="email" id="email" title="Enter your`e e-mail address here" name="email" value="" placeholder="usermail@mail.com" onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'usermail@mail.com'">
+            <textarea name="mess" id='msg' title="Enter your`e message here" rows="" cols="" placeholder="Message text..." onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Message text...'"></textarea>
+                <p class="attach-count"><span>0</span> attached links</p>
+                <div class="attached_links">
+                    <ul class="attached-list">
+                    </ul>
+                </div>
+                <div class="form-footer">
+                    <input type="submit" id="send" class="send-allert button_changer" value="SEND">
+                    <div id="dialog" class="dialog-window" title="General information">
+                        <h3>User data</h3>
+                        <ul class="cont-subtext">
+                            <li id="msg_name">Name: </li>
+                            <li id="msg_email">Email: </li>
+                            <li id="msg_message">Message: </li>
+                        </ul>
+                        <p id="total_count"></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
