@@ -28,7 +28,8 @@ var view = {
         var name = $('#name').val();
         var email = $('#email').val();
         var msgText = $('#msg').val();
-        $.post(action, name, email, msgText, function () {
+        var totalCount = $('.attach-count > span').html();
+        $.post(action, name, email, msgText, totalCount, function () {
         }).error(function (response) {
             $("#dialog").dialog({autoOpen: false, show: { effect: "blind", duration: 800}, modal: true});
             (function () {
@@ -36,16 +37,14 @@ var view = {
                 $("#msg_name").append(document.createTextNode(name));
                 $("#msg_email").append(document.createTextNode(email));
                 $("#msg_message").append(document.createTextNode(msgText));
-                $('#total_count').text('You`ve attached ' + count + ' links');
+                $('#total_count').text('You`ve attached ' + totalCount + ' links');
             })();
         });
     },
     showTooltips: function () {
-        $(function () {
-            $(document).tooltip({
-                track: true,
-                tooltipClass: "custom-tooltip-styling",
-            });
+        $(document).tooltip({
+            track: true,
+            tooltipClass: "custom-tooltip-styling",
         });
     }
 };
@@ -209,4 +208,3 @@ var mySwiper = new Swiper('.swiper-container', {
 
 //Тултипы второй формы
 view.showTooltips();
-
